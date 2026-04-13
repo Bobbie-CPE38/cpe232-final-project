@@ -1,2 +1,1 @@
-# cpe232-final-project
-Final Project for CPE232 course.
+# Predictive Modeling of Ridesharing Prices in Boston
