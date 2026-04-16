@@ -1,5 +1,5 @@
 # Predictive Modeling of Ridesharing Prices in Boston
-
+Dataset: https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston-ma
 
 ## Set Up
 
@@ -26,3 +26,14 @@ pip install -r requirements.txt
 
 ### 3. Choose Kernal (VS Code)
 Go to .ipynb file > Look at top right > Select Another Kernel > Python Environments > .venv
+
+
+## Running Pipelines
+```bash
+python -m src.pipelines.<pipeline_name>
+```
+
+Example src/pipeline/data_prep.py:
+```bash
+python -m src.pipelines.data_prep
+```
