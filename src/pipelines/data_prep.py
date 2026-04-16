@@ -5,7 +5,8 @@ from src.data.save import save_csv
 from src.data.clean import clean_data
 
 from src.features.encode import encode_features
-from src.features.split_scale import split_and_scale
+from src.features.split import split_data
+from src.features.scale import scale_data
 
 
 def run_pipeline(sample_size=None, do_scale=True):
@@ -51,17 +52,11 @@ def run_pipeline(sample_size=None, do_scale=True):
     # split + optional scale
     start = time.time()
     print("Splitting data...")
+    X_train, X_test, y_train, y_test = split_data(df_encoded)
     if do_scale:
-        X_train, X_test, y_train, y_test, scaler = split_and_scale(df_encoded)
+        print("Scaling data...")
+        X_train, X_test, scaler = scale_data(X_train, X_test)
     else:
-        from sklearn.model_selection import train_test_split
-
-        X = df_encoded.drop(columns=['price'])
-        y = df_encoded['price']
-
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42
-        )
         scaler = None
 
     log("split/scale")
@@ -71,4 +66,8 @@ def run_pipeline(sample_size=None, do_scale=True):
 
 
 if __name__ == "__main__":
+    # Dev
     run_pipeline(sample_size=50000, do_scale=False)
+
+    # Final
+    # run_pipeline(sample_size=None, do_scale=True)

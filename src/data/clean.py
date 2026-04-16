@@ -9,13 +9,14 @@ COLS_TO_DROP = [
     'apparentTemperatureMaxTime', 'product_id'
 ]
 
+def drop_missing_price(df) -> pd.DataFrame:
+    return df.dropna(subset=['price'])
+
+def drop_unused_columns(df) -> pd.DataFrame:
+    return df.drop(columns=COLS_TO_DROP)
+
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-
-    # drop missing target
-    df = df.dropna(subset=['price'])
-
-    # drop unused columns
-    df = df.drop(columns=COLS_TO_DROP)
-
+    df = drop_missing_price(df)
+    df = drop_unused_columns(df)
     return df
