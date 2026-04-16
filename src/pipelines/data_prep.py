@@ -12,8 +12,8 @@ from src.features.scale import scale_data
 def run_pipeline(sample_size=None, do_scale=True):
     input_path = "data/raw/rideshare_kaggle.csv"
 
-    clean_output = "data/processed/rideshare_cleaned.csv"
-    encoded_output = "data/processed/rideshare_encoded.csv"
+    output_cleaned = "data/processed/rideshare_cleaned.csv"
+    output_encoded = "data/processed/rideshare_encoded.csv"
 
     # Helper func
     def log(step):
@@ -45,8 +45,8 @@ def run_pipeline(sample_size=None, do_scale=True):
     # save
     start = time.time()
     print("Saving files...")
-    save_csv(df_cleaned, clean_output)
-    save_csv(df_encoded, encoded_output)
+    save_csv(df_cleaned, output_cleaned)
+    save_csv(df_encoded, output_encoded)
     log("save")
 
     # split + optional scale
@@ -61,7 +61,7 @@ def run_pipeline(sample_size=None, do_scale=True):
 
     log("split/scale")
 
-    print("Pipeline finished.")
+    print("Data Preparation Pipeline finished.")
     return X_train, X_test, y_train, y_test, scaler
 
 
