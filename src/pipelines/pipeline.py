@@ -4,16 +4,14 @@ from src.data.load import load_rideshare_data
 from src.data.save import save_csv
 from src.data.clean import clean_data
 
-from src.features.encode import encode_features
-from src.features.split import split_data
-from src.features.scale import scale_data
+from src.features.build import build_features
 
 
-def run_pipeline(sample_size=None, do_scale=True):
+def data_prep(sample_size=None):
     input_path = "data/raw/rideshare_kaggle.csv"
 
     output_cleaned = "data/processed/rideshare_cleaned.csv"
-    output_encoded = "data/processed/rideshare_encoded.csv"
+    output_features = "data/processed/rideshare_feature_engineering.csv"
 
     # Helper func
     def log(step):
@@ -36,38 +34,44 @@ def run_pipeline(sample_size=None, do_scale=True):
     df_cleaned = clean_data(df)
     log("clean")
 
-    # encode
+    # feature en
     start = time.time()
-    print("Encoding features...")
-    df_encoded = encode_features(df_cleaned)
-    log("encode")
+    print("Building features...")
+    df_features = build_features(df_cleaned)
+    log("feature_engineering")
 
     # save
     start = time.time()
     print("Saving files...")
     save_csv(df_cleaned, output_cleaned)
-    save_csv(df_encoded, output_encoded)
+    save_csv(df_features, output_features)
     log("save")
 
-    # split + optional scale
-    start = time.time()
-    print("Splitting data...")
-    X_train, X_test, y_train, y_test = split_data(df_encoded)
-    if do_scale:
-        print("Scaling data...")
-        X_train, X_test, scaler = scale_data(X_train, X_test)
-    else:
-        scaler = None
-
-    log("split/scale")
-
     print("Data Preparation Pipeline finished.")
-    return X_train, X_test, y_train, y_test, scaler
 
 
 if __name__ == "__main__":
     # Dev
-    run_pipeline(sample_size=50000, do_scale=False)
+    data_prep(sample_size=50000)
+    # train()
 
     # Final
-    # run_pipeline(sample_size=None, do_scale=True)
+    # data_prep()
+    # train()
+
+
+
+
+
+
+# # split + optional scale
+# start = time.time()
+# print("Splitting data...")
+# X_train, X_test, y_train, y_test = split_data(df_features)
+# if do_scale:
+#     print("Scaling data...")
+#     X_train, X_test, scaler = scale_data(X_train, X_test)
+# else:
+#     scaler = None
+
+# log("split/scale")
