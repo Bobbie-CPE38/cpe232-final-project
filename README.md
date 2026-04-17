@@ -24,6 +24,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 3. Install Project
+```bash
+pip install -e .
+```
+
 ### 3. Choose Kernal (VS Code)
 Go to .ipynb file > Look at top right > Select Another Kernel > Python Environments > .venv
 
@@ -33,7 +38,7 @@ Go to .ipynb file > Look at top right > Select Another Kernel > Python Environme
 python -m src.pipelines.<pipeline_name>
 ```
 
-Example src/pipeline/data_prep.py:
+Example src/pipeline/main.py:
 ```bash
-python -m src.pipelines.data_prep
+python -m src.pipelines.main
 ```
