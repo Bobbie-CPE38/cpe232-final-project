@@ -54,16 +54,6 @@ def add_label_encoded_features(df: pd.DataFrame) -> pd.DataFrame:
     df['source_enc'] = le_source.fit_transform(df['source'].astype(str))
     return df
 
-def drop_raw_categorical_features(df: pd.DataFrame) -> pd.DataFrame:
-    return df.drop(columns=[
-        'name',
-        'source',
-        'destination',
-        'route',
-        'tier',
-        'cab_type',
-        'short_summary'
-    ])
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
@@ -74,8 +64,5 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
     # TEMP
     df = add_label_encoded_features(df)
-
-    # Drop string column, แม่งแตก
-    df = drop_raw_categorical_features(df)
 
     return df
