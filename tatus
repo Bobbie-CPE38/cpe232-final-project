@@ -1,0 +1,172 @@
+[33mcommit 28d0c636b56002d37dbd92ce0feb4a2f5b574589[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtrain-models[m[33m)[m
+Author: RBKarnz <teerakarnnoiruksa@gmail.com>
+Date:   Fri May 1 18:31:40 2026 +0700
+
+    before EDA update 1/5
+
+[33mcommit d81bd507edb9a9a764a9e0cb72544b52fe9dd025[m[33m ([m[1;31morigin/train-models[m[33m)[m
+Author: RBKarnz <teerakarnnoiruksa@gmail.com>
+Date:   Fri Apr 17 12:08:21 2026 +0700
+
+    fix branch
+
+[33mcommit 9f47c72279d19419463e7b9f3d4d45d0d6f35248[m
+Author: RBKarnz <teerakarnnoiruksa@gmail.com>
+Date:   Fri Apr 17 11:40:10 2026 +0700
+
+    save tuning v1
+
+[33mcommit f065acb1f1406ed5f6ac94209d3cca212a1df943[m[33m ([m[1;32mdevelop[m[33m)[m
+Merge: 3b5fd7c 01b722b
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 22:19:27 2026 +0700
+
+    Merge pull request #2 from Bobbie-CPE38/feat/pipeline
+    
+    feat/data-prep-pipeline
+
+[33mcommit 01b722bec3639c6de4dc9a5a69e6db16fe516932[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 22:14:46 2026 +0700
+
+    Data Prep Pipeline V5
+
+[33mcommit ba085564f90b9346edf6c664162d275a5b972b40[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 16:54:52 2026 +0700
+
+    Data Prep Pipeline V4
+
+[33mcommit f39bf41440d4def8f326a36f5f18070aaa41197d[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 16:38:46 2026 +0700
+
+    Data Prep Pipeline V3
+
+[33mcommit 279a474c0487e2607024d5dc457a093c7cc94881[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 15:29:36 2026 +0700
+
+    data_prep pipeline v2
+
+[33mcommit 00e3361920c742f699422aaefadfa7693015342a[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Thu Apr 16 15:14:28 2026 +0700
+
+    Data preparation function extraction & create pipeline
+
+[33mcommit 3b5fd7cec271d53fc386e353ca83df6155a50b00[m
+Merge: 115ffb5 5a3cf0e
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 20:05:52 2026 +0700
+
+    wip: save changes before merge
+
+[33mcommit 5a3cf0e7999307946130ea2f9d0b8dd70a4ccc96[m
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 19:58:43 2026 +0700
+
+    eda_univariate_V1
+
+[33mcommit 9875f0eafac2c857d945a41edbb68434cd8f1710[m
+Merge: 51f69c4 01a1d96
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 19:35:37 2026 +0700
+
+    Merge branch 'develop' into eda_univariate
+
+[33mcommit 51f69c4b46a1b5e821901b053c640d22dea3918f[m
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 19:25:00 2026 +0700
+
+    wip: start univariate 3
+
+[33mcommit 115ffb5020ec5425e533a7fce4901bb167430758[m
+Author: Maibokdaimhai <thanawat9suntarawattana@gmail.com>
+Date:   Wed Apr 15 19:22:03 2026 +0700
+
+    feat: complete eda feature engineering
+
+[33mcommit fbf5db824f5b61a75661fd8b85184cece6a8c006[m
+Author: Maibokdaimhai <thanawat9suntarawattana@gmail.com>
+Date:   Wed Apr 15 19:08:05 2026 +0700
+
+    feat: complete eda relationships notebook with label data
+
+[33mcommit 11bfd687953e2a1dc280c015ad7c79d861703926[m
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 18:44:05 2026 +0700
+
+    wip: start univariate 2
+
+[33mcommit 01a1d969a4c758bb9c4101425a7d10c145ca3f98[m
+Author: Maibokdaimhai <thanawat9suntarawattana@gmail.com>
+Date:   Wed Apr 15 18:36:08 2026 +0700
+
+    feat: export prepared dataset to data/processed
+
+[33mcommit 42df90d54a64cc376ee1f3c436dbd60242049938[m
+Author: Maibokdaimhai <thanawat9suntarawattana@gmail.com>
+Date:   Wed Apr 15 16:49:55 2026 +0700
+
+    feat: complete eda relationships notebook
+
+[33mcommit 1cf582e93a9a2a656493e35846d4803c9f97db4b[m
+Author: HBLIK <tanadetstu@gmail.com>
+Date:   Wed Apr 15 16:03:12 2026 +0700
+
+    wip: start univariate analysis on price and distance
+
+[33mcommit f147fa782f349a0c12d3a6f045cd795d0ace95ad[m
+Author: Maibokdaimhai <thanawat9suntarawattana@gmail.com>
+Date:   Wed Apr 15 11:30:00 2026 +0700
+
+    feat: export prepared dataset to data/processed
+
+[33mcommit 378950510de7ecdb60c79cc4529dc3d7e62b43e8[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 12:41:33 2026 +0700
+
+    Data Preparation V1
+
+[33mcommit 2797754e271b967de9829b61ec5e2b250ff27c83[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 02:23:19 2026 +0700
+
+    gitignore
+
+[33mcommit 97f7c9740a31246722b6bdb9c906c0dafde11722[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 02:22:48 2026 +0700
+
+    folder structure
+
+[33mcommit 8999c6d66512df330be6c014d3ec4a93e9d710d9[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 02:20:05 2026 +0700
+
+    Foldier structure v3
+
+[33mcommit ebe8dd4da958db6a6922041dfeffb652a37c5e39[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 02:15:39 2026 +0700
+
+    folder structure v2
+
+[33mcommit ab55fd96d5a24613024a49d949f8746ba676a632[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Tue Apr 14 02:01:00 2026 +0700
+
+    Folder structures
+
+[33mcommit 41dad86bfd74f9ed973f07c405c9e11d055f9e8f[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Mon Apr 13 21:53:28 2026 +0700
+
+    Added code base
+
+[33mcommit 815394871d522efe870426de753aef10ddcdaa52[m
+Author: Bobbie-CPE38 <methipat.mans@mail.kmutt.ac.th>
+Date:   Mon Apr 13 21:24:59 2026 +0700
+
+    Initial commit
